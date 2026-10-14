@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐝 Bee — 3D Scroll-Driven Storytelling
 
-## Getting Started
+A scroll-driven interactive 3D website about bees, built with Next.js, React Three Fiber, and GSAP. Inspired by the layout structure of [drone.riotters.com](https://drone.riotters.com) with a natural/botanical palette.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- **3D bee model** rendered with React Three Fiber (WebGL)
+- **Scroll-driven animation** — camera and bee react to scroll position
+- **5 thematic sections**: Hero, Anatomy, Ecosystem, Abilities, Fun Facts
+- **Smooth scrolling** powered by Lenis
+- **Animated honeycombs** as background elements
+- Responsive typography with big stat callouts and floating annotation cards
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Version |
+|---|---|
+| Next.js (App Router) | 16.3.4 |
+| React | 19.2.8 |
+| TypeScript | 5 |
+| Tailwind CSS | 4 |
+| Three.js | ^0.185.1 |
+| @react-three/fiber | ^9.7.0 |
+| @react-three/drei | ^10.7.8 |
+| GSAP + ScrollTrigger | ^3.15.0 |
+| Lenis | latest |
+
+---
+
+## 📁 Project Structure
+
+```
+app/
+  components/
+    Bee.tsx               # 3D bee model (React Three Fiber)
+    SceneCanvas.tsx       # WebGL canvas wrapper
+    HoneycombBg.tsx       # Animated honeycomb background
+    Nav.tsx               # Navigation
+    LenisProvider.tsx     # Smooth scroll provider
+    sections/
+      Hero.tsx            # Section 1 — bee idle animation
+      Anatomy.tsx         # Section 2 — anatomy stat callouts
+      Jelajah.tsx         # Section 3 — ecosystem role
+      Kemampuan.tsx       # Section 4 — bee abilities
+      Fakta.tsx           # Section 5 — floating annotation cards
+public/
+  models/
+    bee-transformed.glb   # Draco-compressed 3D model (in use)
+    bee.glb               # Original model (reference)
+    textures/
+      bee-diffuse.png     # Base color texture
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone the repo
+git clone https://github.com/Athallahsy/Bee.git
+cd Bee
 
-## Learn More
+# Install dependencies
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Run development server
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📜 Attribution
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3D Model: **"Bee"** by [Jakob Henerey](https://sketchfab.com/hellonintendo8) — licensed under [Creative Commons Attribution (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
